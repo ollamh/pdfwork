@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+
+{% block content %}
+
+    <div class="content">
+        <a href="/create">Upload new file</a>
+        {% for obj in object_list %}
+            <ul>
+                <li>{{obj.name}} {{obj.pdf_file_preview}}</li>
+            </ul>
+        {% endfor %}
+    </div>
+
+{% endblock %}
